@@ -163,17 +163,44 @@
 # print(common_members([1,2,3,4,5], [6,7,8,9]))
 # ================================================================
 
+# 12. Write a Python program to print a specified 
+# list after removing the 0th, 4th and 5th elements.
+# Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# Expected Output : ['Green', 'White', 'Black']
+                # RU:12. Напишите программу на Python для печати указанного списка после удаления 
+                #         0-го, 4-го и 5-го элементов.
+                #         Список образцов: ['Красный', 'Зеленый', 'Белый', 'Черный', 'Розовый', 'Желтый'] 
+                #         Ожидаемый результат: ['Зеленый', 'Белый', 'Черный']
+                                                       
+# a = ['Красный', 'Зеленый', 'Белый', 'Черный', 'Розовый', 'Желтый']
+# print(f"original list: {a}")
+# b = a.copy()
+# b.remove(a[0])
+# b.remove(a[4])
+# b.remove(a[5])
+# print(f"copy list: {b}") 
 
+#or with LIST COMPREHENSION
 
+# a = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+# print(f"before: {a}")
+# a = [x for (i,x) in enumerate(a) if i not in (0,4,5)]
+# print(f"after: {a}")
+# ================================================================
 
+# 13. Напишите программу на Python для печати чисел указанного
+#  списка после удаления из него четных чисел.
 
+# a = [1,2,3,4,5,6,7,8,9,10]
+# a = [i for i in a if i %2 != 0]
+# print(a)
+# ================================================================
 
+# 15. Напишите программу на Python для перетасовки и печати указанного списка.
 
-
-
-
-
-
-
-
+# from random import shuffle
+# a = ["apple", "orange", "istam", "rustam", "shaxa"]
+# print(f"original {a}")
+# shuffle(a)
+# print(f"shuffle {a}")
 # ================================================================
