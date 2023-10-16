@@ -114,20 +114,54 @@
 # print(sorted(dup_i))
 # ================================================================
 
+# 8. Write a Python program to check if a list is empty or not.
+        #RU : 8. Напишите программу на Python, проверяющую, пуст ли список или нет
 
+# l = [13]
+# if not l:
+#     print("Список пуст")
+# else:
+#     print("список полный")
+# ================================================================
 
+# 9. Write a Python program to clone or copy a list.
+        # RU: 9. Write a Python program to clone or copy a list.
 
+# list1 = ['a','b','c']
+# copy_list = list(list1.copy())
+# copy_list.insert(0,'s')
 
+# print(f"original_list: {list1}")
+# print(f"copy_list: {copy_list}")
+# ================================================================
 
+# 10. Write a Python program to find the list 
+# of words that are longer than n from a given list of words.
+        #RU: 10. Напишите программу на Python, 
+        # чтобы найти список слов длиной более n из заданного списка слов.
 
+# def find_list(n,lis:list):
+#     for i in lis:
+#         if len(i) == n:
+#             print(i)
+# find_list(5, ['istam','rusik',"shax"])
+# ================================================================
 
+# 11. Write a Python function that takes two lists and
+# returns True if they have at least one common member.
+        # RU: 11. Напишите функцию Python, которая принимает два списка и возвращает True, 
+        #     если у них есть хотя бы один общий член.
 
-
-
-
-
-
-
+# def common_members(list1,list2):
+#     result = ''
+#     for i in list1:
+#         for x in list2:
+#             if i == x:
+#                 result = 'Есть одинаковый'
+#                 return result
+# print(common_members([1,2,3,4,5], [5,6,7,8,9]))
+# print(common_members([1,2,3,4,5], [6,7,8,9]))
+# ================================================================
 
 
 
