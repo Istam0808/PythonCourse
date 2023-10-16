@@ -2,15 +2,12 @@
  Hi i'm learning Python, I created this repository for learning Python
 
 
+## ISTAM
+___ ___ ___  __   _   _ 
+ |  \__  |  |__| | \ / |  
+_|_  __| |  |  | |  |  | 
 
-
- 
-# Istam                                                       
- _______  _______  _________  _______
-    |     |            |      |     |   |\      /|           
-    |     |_____       |      |_____|   | \    / |     _____        
-    |           |      |      |     |   |  \  /  |     __\\_  COMPANY     
- ___|___   _____|      |      |     |   |   \/   |      
+                                                  
                                                                  
 
 
