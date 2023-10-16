@@ -1,3 +1,4 @@
+# HOMEWORK
 
 # 1. Create a tuple with numbers and print one last item.
 # RU: Создайте кортеж с числами и выведите один последный элемент.
@@ -59,23 +60,7 @@
 # numbers = (3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5) 
 # result = sort_tuple(numbers)  
 # print(list(result)) 
-
-# ================================================================
-# HOMEWORK
-
 # ================================================================
 
-# 1. Write a Python program to sum all the items in a list.
-
-# a = [1,2,3,4,5,6,7,8,9,10]
-# c = 0
-# for i in a:
-#     c += i
-# print (c)
-    
-# or
-
-# a = [1,2,3,4,5,6,7,8,9,10]
-# print(sum(a))
 
 
