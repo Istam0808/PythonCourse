@@ -5,8 +5,8 @@ wants_again = True
 while wants_again:
     import random
     lives = 7
-    random_number = random.randint(1, 100)
-    guessed_number = int(input("Enter a number from 1 to 100: "))
+    random_number = random.randint(1, 50)
+    guessed_number = int(input("Enter a number from 1 to 50: "))
 
     while random_number != guessed_number:
         lives -= 1
