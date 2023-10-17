@@ -14,7 +14,6 @@ recursion
 #         return stars1(n, i-1)
 # stars1(1)
 
-
 # def factorial(n):
 #     if n == 1:
 #         return n
