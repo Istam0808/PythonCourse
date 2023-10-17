@@ -33,8 +33,6 @@
 # print(remove_nth_index('istam',2))
 
 
-
-
 # string = "123456789"
 # string1 = ""
 # for i in range(len(string)):
