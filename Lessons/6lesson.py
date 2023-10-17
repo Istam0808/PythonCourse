@@ -45,7 +45,6 @@ UPDATE
 # [].reverse() =>  меняет оригинальный лист
 """
 
-
 #1 способ
 # def multiply_list(list,n):
 #     result = []
@@ -53,7 +52,6 @@ UPDATE
 #         x  = result.append(elements * n)
 #         return x
 # print(multiply_list(["abc"],3))
-
 
 #2 EX:
 
