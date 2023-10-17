@@ -75,10 +75,8 @@
 for num in range(10, 50, 2):
     print(num) if num % 10 == 0 else print(f'{num} не делиться на 10')
 
-
-
+    
 import time 
-
 start = time.time()
 
 def even_nums():
