@@ -22,7 +22,6 @@
 # s = [f"Even {num}" if num % 2 == 0 else f"odd {num}"  for num in list(arr) if num<51]
 # print(s)
 
-
 # List comprehension
 # [ <expression> for x in <sequence> if <condition> ]
 # [ <выражение> for x in <последовательность>, if <условие>]
@@ -44,7 +43,6 @@
 # # Ex3: With an if-condition: Multiples of four:
 # fourx = [x for x in new_data if x % 4 == 0]
 # print("Divisible by four: ", fourx)
-
 
 # # Ex4: Alternatively, we can update the list with the if condition as well
 # fourxsub = [el-1 for el in new_data if el % 4 == 0]
