@@ -13,7 +13,6 @@
 # print(" " in "Hello world")
 # "..." in "..."  => checks if the other string is
 #                    included in the string
-
 # -----------------------------------
 # REPLACE
 # .replace('...', '...')  (==> .replaceAll())
