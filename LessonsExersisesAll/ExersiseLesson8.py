@@ -105,7 +105,6 @@
 # print(find_numbers())
 
 # ==========================================================================================
-
 # INTERMEDIATE LEVEL
 
 # 1. Find an average number of given numbers of the list
