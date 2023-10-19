@@ -12,11 +12,11 @@
 # [7, 3] [2, 0, 2]
 
 # def even_odd(sentence):
-#     numbers = [int(x) for x in sentence.split() if x.isdigit()]
+#     numbers = [int(x) for x in sentence if x.isnumeric()]
 #     even = [x for x in numbers if x % 2 == 0]
-#     odd = [x for x in numbers if x % 2 != 0]
+#     odd = [x for x in numbers if x not in even]
 #     return even, odd
-# even, odd = even_odd("This is a test sentence with 1 2 3 numbers 4 5 6")
+# even, odd = even_odd("This is a test sentence with 1 2 3 numbers 45 6")
 # print("Evens:", even)
 # print("Odds:", odd)
 
@@ -57,7 +57,7 @@
 #     vowels = 0 
 #     constants = 0
 #     vowels1 = 'A', 'E', 'I', 'O', 'U', 'Y'
-#     constants1 = 'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'
+#     constants1 = list('BCDFGHJKLMNPQRSTVWXYZ')
 
 #     for letter in sentence:
 #         if letter.upper() in vowels1:
@@ -95,14 +95,18 @@
 
 # 7 and 5
 # 1500 and 2700
-def find_numbers():
-    pass
 
+# def find_numbers():
+#     result=[]
+#     for i in range(1500,2701):
+#         if i %35==0:
+#             result.append(i)
+#     return result
+# print(find_numbers())
 
 # ==========================================================================================
 
 # INTERMEDIATE LEVEL
-
 
 # 1. Find an average number of given numbers of the list
 # and return nearest integer from given list
@@ -110,8 +114,20 @@ def find_numbers():
 # целое число из данного списка.
 # INPUT:  [1, 10, 40, 35, 20, 30, 50, 60, 70]
 # OUTPUT: 37.777...  =>  35  =>  index-3
-def nearest_average(arr):
-    pass
+
+
+# def blizko_average(lst):
+#     srz = sum(lst) / len(lst)
+#     blizko = round(srz)
+#     index = lst.index(blizko)
+#     return blizko, index
+
+# lst = [1, 10, 40, 35, 20, 30, 50, 60, 70]
+# blizko, index = blizko_average(lst)
+# print('Среднее значнеие:', sum(lst) / len(lst))
+# print('Ближайший:', blizko)
+# print('Индекс:', index)
+
 
 # ==========================================================================================
 
@@ -121,23 +137,15 @@ def nearest_average(arr):
 #   ***
 #  *****
 # *******
-def pyramid(n):
-    pass
 
+# def pyramid(n):
+#     i = 1
+#     while i <= n:
+#         print(" "*(n-i) + "*"*(2*i-1))
+#         i += 1
+#     print(" "*(n-1))
+# pyramid(10)
 
-# ==========================================================================================
-# 4. Write a Python program to guess a number between 1 and 9.
-# Note : User is prompted to enter a guess. If the user guesses wrong
-# then the prompt appears again until the guess is correct, on successful
-# guess, user will get a "Well guessed!" message, and the program will exit.
-# ---------------------------------------------------------------
-# RU: Напишите программу на Python, чтобы угадать число от 1 до 9.
-# Примечание: пользователю предлагается ввести догадку. Если пользователь
-# угадывает неправильно, то подсказка появляется снова, пока догадка не будет
-# правильной, при успешном угадывании пользователь получит сообщение «Хорошо
-# угадано!» и программа выйдет.
-def guess_number():
-    pass
 
 # ==========================================================================================
 # 4. Write a Python program to construct the following pattern,
@@ -153,8 +161,14 @@ def guess_number():
 # * * *
 # * *
 # *
-def pattern(n):
-    pass
+
+# def pattern(n):
+#     for i in range(n):
+#         print('* '*i)
+#     for i in range(n):
+#         print('* '*(n-i))
+
+# pattern(5)
 # ==========================================================================================
 
 
@@ -205,4 +219,19 @@ def sum_fibonacci(n):
 #         created_password += everything_includes[random_int]
 #     print(created_password)
 # create_password_of_length()
+# ==========================================================================================
+
+# *
+# * *
+# * * *
+# * * * *
+# * * * * *
+
+# def pattern(n):
+#     i = 1
+#     while i <= n:
+#         print ("* "*(1*i-1))
+#         i += 1
+#     print ("* "*(1*i-1))
+# pattern(5)
 # ==========================================================================================
