@@ -84,29 +84,16 @@
 # входных данных и возвращает среднее значение чисел.
 # [13, 22, 35, 41, 52]   => 13+22+35+41+52 = 163 / 5 = 32.6
 
-# def find_avarage(arr):
-#     a = sum(arr) / len(arr)
-#     x = round(a)
-#     idx = arr.index(x)
-#     return x, idx
+# def get_avarage(arr):
+#     avarage = sum(arr) / len(arr)
+#     nearest = min(arr, key=lambda x: abs(x - avarage))
+#     return avarage, nearest
+            
+# listarr = [23, 12, 52, 24, 55, 74, 14, 27]
 
-# arr = [13,22,33,35,41,52]
-# x,idx = find_avarage(arr)
-# print('avarage: ', sum(arr) / len(arr))
-# print('close:', x)
-# print('index: ', idx)
-
-
-
-
-
-
-
-
-
-
-
-
+# print(listarr)
+# avarage, nearest = get_avarage(listarr)
+# print(f"The average is {avarage}, the nearest is {nearest}")
 
 
 
