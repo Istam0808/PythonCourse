@@ -33,11 +33,12 @@
 
 # mdict = {"a": "1", "b": 2, "c": 3}
 # num = sum(v if isinstance(v, int) else int(v) for v in mdict.values())
-# # for v in mdict.values():
-# #     if type(v) == int:
-# #         num += v
-# #     elif v.isnumeric():
-# #         num += int(v)
+# num = 0
+# for v in mdict.values():
+#     if type(v) == int:
+#         num += v
+#     elif v.isnumeric():
+#         num += int(v)
 # print("Сумма :", num)
 
 
