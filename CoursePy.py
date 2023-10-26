@@ -12,51 +12,83 @@
 
 lesson = 'Introduction'
 """
-# print(..., end=’’, sep=’’)
-# print("Hello world")
-# --------------------------------------
-# simple text is called string in python
-# RU: текст называется стринг в питоне
-# --------------------------------------
-# number is called integer in python
-# RU: число называется интеджер в питоне
-# --------------------------------------
-# "123" # string
-# 123   # integer
-# --------------------------------------
-# print(value, value, ..., sep="...", end="...")
-# sep => separator  => is used to separate values
-# end => end of line => is used to end the line
-# --------------------------------------
-# del name_of_variable
-# deletes the variable
-# --------------------------------------
-# type(...)  => shows the type of the value
-# --------------------------------------
-# int(...)   => converts to integer  => 123
-# str(...)   => converts to string   => "123"
-# float(...) => converts to float    => 123.01
-# --------------------------------------
-# Simple functions
-# def  (define)  =>  is used to create a function
-# def blender(fruit="Apple"):
-#     print(f"{fruit} juice is ready!")
-# blender()
-# blender("Banana")
-# --------------------------------------
-# GLOBAL VARIABLES
+# IN Python
+# ------------
+# String   ("...", '...')
+# triple "   =>   Multiline comment
+# '''...'''   =>   Multiple comment
+# "..."   =>   String (text)
+# '...'   =>   String (text)
+
+# String(123) => "123"  => in JS
+# str(123)    => "123"  => in Python
+# ----------------------------------------
+# int()   =>   parseInt()
+# type()  =>   typeof()
+# ----------------------------------------
+# print(int(123.5))
+# print(float("123"))
+
+# print(type("123"))      # <class 'str'>
+# print(type(int("123")))  # <class 'int'>
+# print(type(float("123")))  # <class 'float'>
+# ----------------------------------------
+# `${...}`  => String template   => JS
+# f'...'   =>  Formatted string  => Python
+# ----------------------------------------
+# print("This is", test,  end="!!!", sep="---")
+# ----------------------------------------
+# test = 'Hello world'       # Global variable
+# test = "Updated text"      # Update global variable
+# ----------------------------------------
+# x = [1, 2, 3]
+# a = x[0]
+# b = x[1]
+# c = x[2]
+# a, b, c = x
+# print(a, b, c, sep="-")
+# ----------------------------------------
+# x = [1, 2, 3, 4, 5, 6, '...']
+# first, *others, last = x
+# print(first)
+# print(others)
+# print(last)
+# ----------------------------------------
+# function ...() {}
+# def ...():   #  =>  def == define
+# ____...
 
 # def test():
-#     global x
-#     x =  10
-#     print("Hello world")
-# test()
+#     global x, y
+#     x = 10
+#     y = 20
+#     print("Hello world")  # this is inside function
+
+# test()                # This line calls function
+# print("Hello world")  # this line is out of function
+# print(x)              # This line calls global variable
+# -------------------------------------------------------
+# x = 10
 # print(x)
-# --------------------------------------
-# de + structuring
-# x = [1, 2, 3, 4, 5]     #  => list (structure)
-# *a, b, c = x            #  => destructuring
-# print(a, b, c, sep="|")
+# del x
+# print(x)
+
+# let x = {
+#     name: 'John',
+# }
+# delete x['name']
+# -------------------------------------------------------
+# input   =>  allows us to get input from user
+# answer = input("How are you? ")
+# print("You typed: " + answer)
+# -------------------------------------------------------
+# if ...:
+#     ...
+# elif ...:
+#     ...
+# else:
+#     ...
+
 """
 
 
@@ -174,6 +206,65 @@ lesson = 'numbers'
 
 # print(sum(1, 2, 3, 4, 5))
 # ----------------------------------------------------------------------
+"""
+
+
+lesson = 'if/elif/else  &&  match/case  &&  Exercises'
+"""
+# Bool   =>   bool()
+# ------------------------------------------------------------------
+# If / elif / else 
+# if 1==2:
+#     print(f'1 == 1 is => {1==2}')
+# elif 1==1:
+#     print(f'1 == 1 is => {1==1}')
+# else:
+#     print(1==2)
+# ------------------------------------------------------------------
+# match / case
+# HTTPS_status = 200
+# match HTTPS_status:
+#     case 200 | 201:
+#         print('OK')
+#     case 404:
+#         print('Not found')
+#     case 301 | 302:
+#         print('Redirect')
+#     case _:
+#         print('Unknown')
+# ------------------------------------------------------------------
+
+# EXERCISES
+# 1. Reverse and input from a user    &&    Reverse a number
+# RU: 
+#     Берите текст от клиента и выведите на терминале. 
+#     Найти зеркальное число.
+# inp = input("What is your name: ")
+# print(inp[::-1])
+# print(str(num)[::-1])
+# ----------------------------------------------------------
+# 2. Swap first and last digits of a number
+# RU: Поменяйте местами первую и последнюю цифры числа.
+# x = 123456789
+# x = str(x)
+# print(int(x[-1] + x[1:-1] + x[0]))
+# ----------------------------------------------------------
+# 3. check if a string is a palindrome
+
+def is_polindrome(arg) -> bool:
+    if type(arg) == int:
+        arg = str(arg)
+    # if isinstance(arg, int):
+    #     arg = str(arg)
+    return arg == arg[::-1]
+print(is_polindrome(input('Guess a polindrome: ')))
+# ----------------------------------------------------------
+
+# SOLUTIONS FOR PREVIOUS EXERCISES
+# print(str(num)[::-1])
+# print(input('Enter a number: ')[::-1])
+# print(str(num)[-1] + str(num)[1:-1] + str(num)[0])
+# print(str(num) == str(num)[::-1])
 """
 
 
@@ -410,7 +501,7 @@ lesson = 'strings'
 """
 
 
-lesson = 'try-except  &  Exceptions'
+lesson = 'try-except  &  Exceptions  &  Generators'
 """
 # number types  => int, float, complex
 # str
@@ -483,65 +574,78 @@ lesson = 'try-except  &  Exceptions'
 # for num in range(10, 50, 2):
 #     print(num) if num%10==0 else print('Not devidible to 10')
 # =========================================================================
-"""
+
+# ERROR TYPES
+1. SyntaxError  =>  '...  => not closed string
+    - Forgetting to put a closing quote on a string.
+    - Forgetting to put a colon at the end of a def, while, for, or if statement.
+
+2. TypeError    =>  1 + '...'  =>  unsupported operand type(s) for +: 'int' and 'str'
+    - Trying to add a string to an integer or float.
+    - Trying to add a list or tuple to an integer or float.
+
+3. NameError    =>  x  =>  name 'x' is not defined
+    - Trying to use a variable that does not exist.
+    - Trying to use a function or method that does not exist.
+
+4. IndexError   =>  [1, 2, 3][3]  =>  list index out of range
+    - Trying to access an index in a list that does not exist.
+
+5. ValueError   =>  int('...')  =>  invalid literal for int() with base 10: '...'
+    - Converting a string to an integer or float, but the string is not a valid number.
+    - Converting a string to a boolean, but the string is not 'True' or 'False'.
+    - Using the datetime.datetime.strptime() function with a string that does not match the specified format string.
+    - Using the json.loads() function with a string that is not valid JSON.
+
+6. KeyError     =>  {'a': 1}['b']  =>  'b' =>  not in dictionary
+    - Trying to access a key in a dictionary that does not exist.
+
+7. AttributeError  =>  'Hello'.append('!')  =>  'str' object has no attribute 'append'
+    - Trying to use a method on a data type that does not have that method.
+    - Trying to access an attribute that does not exist.
+    
+8. ZeroDivisionError  =>  1 / 0  =>  division by zero
+    - Trying to divide a number by zero.
+    
+9. ImportError  =>  import math  =>  No module named 'math'
+    - Trying to import a module that does not exist.
+    
+10. IndentationError  =>  def func():  =>  expected an indented block
+    - Forgetting to indent the code inside a function, while, for, or if statement.
+    
+# ============================================================================
+# =============================================================================
+# Generators
+# Using a for loop to generate a list of even numbers up to 10^6
+import time
+def even_nums():
+    for i in range(1000000):
+        if i % 2 == 0:
+            yield i
+    # result = []
+    # for i in range(1000000):
+    #     if i % 2 == 0:
+    #         result.append(i)
+    # return result
 
 
-lesson = 'if/elif/else  &&  match/case  &&  Exercises'
-"""
-# Bool   =>   bool()
-# ------------------------------------------------------------------
-# If / elif / else 
-# if 1==2:
-#     print(f'1 == 1 is => {1==2}')
-# elif 1==1:
-#     print(f'1 == 1 is => {1==1}')
-# else:
-#     print(1==2)
-# ------------------------------------------------------------------
-# match / case
-# HTTPS_status = 200
-# match HTTPS_status:
-#     case 200 | 201:
-#         print('OK')
-#     case 404:
-#         print('Not found')
-#     case 301 | 302:
-#         print('Redirect')
-#     case _:
-#         print('Unknown')
-# ------------------------------------------------------------------
+# Using a generator to generate a list of even numbers up to 10^6
+before = time.time()
+even_nums_gen = even_nums()
+after = time.time()
+print(list(even_nums_gen))
+print(round(after - before, 5))
+# =========================================================================
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
 
-# EXERCISES
-# 1. Reverse and input from a user    &&    Reverse a number
-# RU: 
-#     Берите текст от клиента и выведите на терминале. 
-#     Найти зеркальное число.
-# inp = input("What is your name: ")
-# print(inp[::-1])
-# print(str(num)[::-1])
-# ----------------------------------------------------------
-# 2. Swap first and last digits of a number
-# RU: Поменяйте местами первую и последнюю цифры числа.
-# x = 123456789
-# x = str(x)
-# print(int(x[-1] + x[1:-1] + x[0]))
-# ----------------------------------------------------------
-# 3. check if a string is a palindrome
-
-def is_polindrome(arg) -> bool:
-    if type(arg) == int:
-        arg = str(arg)
-    # if isinstance(arg, int):
-    #     arg = str(arg)
-    return arg == arg[::-1]
-print(is_polindrome(input('Guess a polindrome: ')))
-# ----------------------------------------------------------
-
-# SOLUTIONS FOR PREVIOUS EXERCISES
-# print(str(num)[::-1])
-# print(input('Enter a number: ')[::-1])
-# print(str(num)[-1] + str(num)[1:-1] + str(num)[0])
-# print(str(num) == str(num)[::-1])
+g = fibonacci()
+for i in range(10):
+    print(next(g))  # Output: 0 1 1 2 3 5 8 13 21 34
+# =========================================================================
 """
 
 
@@ -551,10 +655,10 @@ lesson = 'functions  &&  lambda  &&  Exercises'
 #     print(arg1, arg2, arg3)
 # func_name(1, 2, 3)
 # ----------------------------------------------------------
-from typing import Union
-def func_name(arg1:Union[str, int]) -> type:
-    return arg1
-print(func_name(1))
+# from typing import Union
+# def func_name(arg1:Union[str, int]) -> type:
+#     return arg1
+# print(func_name(1))
 # ----------------------------------------------------------
 # default value
 # ----------------------------------------------------------
@@ -649,13 +753,13 @@ for name in users:
         
 # ---------------------------------------------
 
-# # [if … else for … in … ]
-# a = [ name if name.endswith('z') else 'Not Found' for name in users ]
-# for name in users:
-#     if name.endswith('z'):
-#         a.append(name)
-#     else:
-#         a.append('Not Found')
+# [if … else for … in … ]
+a = [ name if name.endswith('z') else 'Not Found' for name in users ]
+for name in users:
+    if name.endswith('z'):
+        a.append(name)
+    else:
+        a.append('Not Found')
 
 # ---------------------------------------------
         
