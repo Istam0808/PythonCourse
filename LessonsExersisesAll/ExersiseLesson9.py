@@ -62,20 +62,20 @@
 # RU: Напишите программу, которая принимает строк в качестве входных данных
 # и возвращает количество букв в каждой строке.
 
-# def count_letters(lst):
-#     string = ''.join(lst)
-#     qwer = list(filter(lambda x: x, set(string)))
-#     letter_counts = {}
-#     for char in string:
-#         if char in letter_counts:
-#             letter_counts[char] += 1
-#         else:
-#             letter_counts[char] = 1
-#     for letter, count in sorted(letter_counts.items()):
-#         print(letter, "=", count)
+def count_letters(lst):
+    string = ''.join(lst)
+    qwer = list(filter(lambda x: x, set(string)))
+    letter_counts = {}
+    for char in string:
+        if char in letter_counts:
+            letter_counts[char] += 1
+        else:
+            letter_counts[char] = 1
+    for letter, count in sorted(letter_counts.items()):
+        print(letter, "=", count)
 
-# letters_list = ["Istam","rustam"]
-# count_letters(letters_list)
+letters_list = ["Istam","rustam"]
+count_letters(letters_list)
 #=======================================================================================
 
 # 5. Write a program that takes a list of numbers as input and
