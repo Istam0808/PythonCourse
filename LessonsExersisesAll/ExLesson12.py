@@ -56,9 +56,11 @@
 # переданное в качестве второго аргумента.
 # Input:   {'a': 100, 'b': 200, 'c': 300, 'd': "Hello world", 'e': True},    150
 # Output:  {'b': 200, 'c': 300}
-def get_keys_greater_than(dict, num):
-    pass
 
+# def get_keys_greater_than(dict, num):
+#     a = {k:v for k,v in dict.items() if isinstance(v, int) and v > num}
+#     return a
+# print(get_keys_greater_than({'a': 100, 'b': 200, 'c': 300, 'd': "Hello world", 'e': True}, 150))
 
 # ==============================================================
 # 14. Write a function that takes a dictionary as an argument and returns
