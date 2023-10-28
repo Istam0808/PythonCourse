@@ -34,6 +34,7 @@
 # ==================================
 # 2. min()         Works the same way as max(), but returns the smallest value
 
+
 # ===========================================================================================
 # 3. map()         Returns a map object (which is an iterator) of the results after applying the
 #               given function to each item of a given iterable (list, tuple etc.)
