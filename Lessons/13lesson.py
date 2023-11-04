@@ -1,56 +1,67 @@
-"""
 # my_set = {"apple", "banana", "cherry"}
-# print(my_set)
+# my_set = ["apple", "banana", "cherry", "cherry", "cherry"]
+# print(set(my_set))
+# {'banana', 'apple', 'cherry'}
 
-# # or use the set function and create from an iterable, e.g. list, tuple, string
+# or use the set function and create from an iterable, e.g. list, tuple, string
 # my_set_2 = set(["one", "two", "three"])
 # my_set_2 = set(("one", "two", "three"))
 # print(my_set_2)
+# {'three', 'one', 'two'}
 
 # my_set_3 = set("aaabbbcccdddeeeeeffff")
 # print(my_set_3)
+# {'b', 'c', 'd', 'e', 'f', 'a'}
 
-# # careful: an empty set cannot be created with {}, as this is interpreted as dict
+# # careful: an empty set cannot be created with {}, 
+# as this is interpreted as dict
 # # use set() instead
 # a = {}
 # print(type(a))
+# # <class 'dict'>
 # a = set()
 # print(type(a))
-# # {'banana', 'apple', 'cherry'}
-# # {'three', 'one', 'two'}
-# # {'b', 'c', 'd', 'e', 'f', 'a'}
-# # <class 'dict'>
 # # <class 'set'>
-
-
 # # -----------------------------------------------------------------------------------
 # # NOTES  -----------------------------------------------------
 
 # test_set = {1, 2, 3, 4, 5}
-# # Don't allow duplications
-# # Doesn't have order, index, keys, values, items, slices, etc...
+# Don't allow duplications
+# Doesn't have order, index, keys, values, items, slices, etc...
 
 
-# # 1 and True are the same and 0 and False are the same
-# # 1 == True  =>  True
-# # 0 == False  =>  True
-# # 1 is True  =>  False
-# # 0 is False  =>  False
+# test_set = {1, True, False, 0}
+# print(set(test_set))
+# 1 and True are the same and 0 and False are the same
+# 1 == True  =>  True
+# 0 == False  =>  True
+# 1 is True  =>  False
+# 0 is False  =>  False
 
 
-# # -----------------------------------------------------------------------------------
-# # ACCESSING ITEMS --------------------------------------------
-# # loop   ||    ... in ...
+# -----------------------------------------------------------------------------------
+# ACCESSING ITEMS --------------------------------------------
+# loop   ||    ... in ...
+# x = {1, 2, 3, 4, 5}
+# for n in x:
+#     if ... in x:
+#         pass
+#     print(n)
 
+# -----------------------------------------------------------------------------------
+# ADDING -----------------------------------------------------
 
-# # -----------------------------------------------------------------------------------
-# # ADDING -----------------------------------------------------
+# add()                  Adds an element to the set
+#   EX: x.add(4)  => changes the original set
+# l = {1, 2, 3}
+# l.add(1) # NOTHING IS ADDED
+# l.add(4)
 
-# # add()	                Adds an element to the set
-# #   EX: x.add(4)  => changes the original set
-
-# # update()	            Updates the set with the union of this set and others
-# #  EX: x.update([4, 5, 6])  => changes the original set
+# update()              Updates the set with the union of this set and others
+# EX: x.update([4, 5, 6])  => changes the original set
+# l = {1, 2, 3}
+# l.update([3, 2, 4, 5, 6])
+# print(l)
 
 
 # # -----------------------------------------------------------------------------------
@@ -60,12 +71,13 @@
 # evens = {0, 2, 4, 6, 8}
 # primes = {2, 3, 5, 7}
 
-# # union() : combine elements from both sets, no duplication
-# # note that this does not change the two sets
+# union(): combine elements from both sets, no duplication
+# note that this does not change the two sets
 # u = odds.union(evens)
+# u = odds | evens
 # print(u)
-# # EX:
-# # a = x.union(y)  # =>  x | y
+# EX:
+# a = x.union(y)  # =>  x | y
 
 # # intersection(): take elements that are in both sets
 # # return a new set, that only contains the items that are present in both sets.
@@ -83,13 +95,13 @@
 # # -----------------------------------------------------------------------------------
 # # DIFFERENCE of sets
 # setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-# setB = {1, 2, 3,                   10, 11, 12}
+# setB = {1, 2, 3,                  10, 11, 12}
 
 # # difference() : returns a set with all the elements from the setA that are not in setB or in C,D... .
 # # x.difference(y)     =>  x - y
 # # x.difference(y, z)  =>  x - y - z
 
-# diff_set = setA.difference(setB)
+# diff_set = setA.difference(setB, {8, 9})
 # print("difference 1: ", diff_set)
 
 # # A.difference(B) is not the same as B.difference(A)
@@ -104,12 +116,11 @@
 # diff_set = setB.symmetric_difference(setA)
 # print("difference 4: ", diff_set)
 
-
 # # -----------------------------------------------------------------------------------
 # # DELETE
 
-# # remove(x): removes x, raises a KeyError if element is not present
-# my_set = {"apple", "banana", "cherry"}
+# remove(x): removes x, raises a KeyError if element is not present
+my_set = {"apple", "banana", "cherry"}
 # my_set.remove("apple")
 # print(my_set)
 
@@ -117,17 +128,20 @@
 # # my_set.remove("orange")
 
 # # discard(x): removes x, does nothing if element is not present
-# my_set.discard("cherry")
-# my_set.discard("blueberry")
-# print(my_set)
+my_set.discard("cherry")
+my_set.discard("blueberry")
+print(my_set)
+
+
 
 # # clear() : remove all elements
 # my_set.clear()
 # print(my_set)
 
 # # pop() : return and remove a random element
-# a = {True, 2, False, "hi", "hello"}
-# print(a.pop())
+# a = {True, False, 2, "hi", "hello"}
+# result = a.pop()
+# print(result)
 # print(a)
 
 # # -----------------------------------------------------------------------------------
@@ -139,31 +153,32 @@
 
 # # -----------------------------------------------------------------------------------
 # # UPDATE sets
-# setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-# setB = {1, 2, 3,                    10, 11, 12}
+setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+setB = {1, 2, 3,                    10, 11, 12}
 
 # # update() : Update the set by adding elements from another set.
 # setA.update(setB)
 # print("Set update", setA)
 
-# # Keep ONLY the Duplicates
-# # intersection_update() : Update the set by keeping only the elements found in both
-# setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+# Keep ONLY the Duplicates
+# intersection_update() : Update the set by keeping only 
+# the elements found in both
 # setA.intersection_update(setB)
 # print("Set intersection_update", setA)
 
 # # difference_update() : Update the set by removing elements found in another set.
-# setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # setA.difference_update(setB)
 # print("Set difference_update", setA)
 
-# # symmetric_difference_update():  Keeps only the elements that are NOT present in both sets.
+# # symmetric_difference_update():  Keeps only the elements that 
+# are NOT present in both sets.
 # # Keep All, But NOT the Duplicates.
 # setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # setA.symmetric_difference_update(setB)
 # print("Set symmetric_difference_update", setA)
 
-# Note: all update methods also work with other iterables as argument, e.g lists, tuples
+# Note: all update methods also work with other 
+# iterables as argument, e.g lists, tuples
 # setA.update([1, 2, 3, 4, 5, 6])
 
 # # -----------------------------------------------------------------------------------
@@ -189,6 +204,9 @@
 
 
 # # -----------------------------------------------------------------------------------
+# super => always parent
+# sub   => always child
+
 # # Subset, Superset, and Disjoint ----------------------------------------------------
 # setA = {1, 2, 3, 4, 5, 6}
 # setB = {1, 2, 3}
@@ -200,29 +218,30 @@
 # print(setA.issuperset(setB))  # True
 # print(setB.issuperset(setA))
 
-# # isdisjoint(setX) : Return True if both sets have a null intersection, i.e. no same elements
+# # isdisjoint(setX) : Return True if both sets have a 
+# null intersection, i.e. no same elements
 # setC = {7, 8, 9}
 # print(setA.isdisjoint(setB))
+# print(setB.isdisjoint(setA))
 # print(setA.isdisjoint(setC))
 # # -----------------------------------------------------------------------------------
 # # ------------------------------------------------------------------------------------
 # # FROZENSET
-# # Frozen set is just an immutable version of normal set.
-# # While elements of a set can be modified at any time, elements of frozen set
-# # remains the same after creation. Creation with: my_frozenset = frozenset(iterable)
+# Frozen set is just an immutable version of normal set.
+# While elements of a set can be modified at any time, elements of frozen set
+# remains the same after creation. Creation with: my_frozenset = frozenset(iterable)
 
 # a = frozenset([0, 1, 2, 3, 4])
 
-# # The following is not allowed:
-# # a.add(5)
-# # a.remove(1)
-# # a.discard(1)
-# # a.clear()
+# The following is NOT allowed:
+# a.add(5)
+# a.remove(1)
+# a.discard(1)
+# a.clear()
+# a.update([1,2,3])
 
-# # Also no update methods are allowed:
-# # a.update([1,2,3])
 
-# # Other set operations work
+# Other set operations work
 # odds = frozenset({1, 3, 5, 7, 9})
 # evens = frozenset({0, 2, 4, 6, 8})
 # print(odds.union(evens))
@@ -232,4 +251,8 @@
 # frozenset()
 # frozenset({1, 3, 5, 7, 9})
 
-"""
+# In order to change the SET
+# we can change its type to a normal set or another sequence type
+# odds = frozenset({1, 3, 5, 7, 9})
+# changed_fz_set = list(odds)
+# print(changed_fz_set)
