@@ -10,6 +10,7 @@
 #     return(string[0:3])
 # print(firt_three('Hello'))
 
+
 #3
 # def firt_half_even(string):
 #     if len(string)%2 == 0:
