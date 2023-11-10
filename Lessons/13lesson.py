@@ -81,6 +81,8 @@
 
 # # intersection(): take elements that are in both sets
 # # return a new set, that only contains the items that are present in both sets.
+            # взять элементы, которые есть в обоих наборах возвращаем новый набор, 
+            #     содержащий только те элементы, которые присутствуют в обоих наборах
 # i = odds.intersection(evens)  # =>  x & y
 # print("intersection 1: ", i)  # =>  {}
 # # EX: x.intersection(y) #  =>  x & y
@@ -120,6 +122,7 @@
 # # DELETE
 
 # remove(x): removes x, raises a KeyError if element is not present
+                #Ru: удаляет x, вызывает KeyError, если элемент отсутствует
 my_set = {"apple", "banana", "cherry"}
 # my_set.remove("apple")
 # print(my_set)
@@ -128,9 +131,10 @@ my_set = {"apple", "banana", "cherry"}
 # # my_set.remove("orange")
 
 # # discard(x): removes x, does nothing if element is not present
-my_set.discard("cherry")
-my_set.discard("blueberry")
-print(my_set)
+                #Ru: удаляет x, ничего не делает, если элемент отсутствует
+# my_set.discard("cherry")
+# my_set.discard("blueberry")
+# print(my_set)
 
 
 
@@ -153,10 +157,11 @@ print(my_set)
 
 # # -----------------------------------------------------------------------------------
 # # UPDATE sets
-setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
-setB = {1, 2, 3,                    10, 11, 12}
+# setA = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+# setB = {1, 2, 3,                    10, 11, 12}
 
 # # update() : Update the set by adding elements from another set.
+                #Ru: Обновит набор, добавив элементы из другого набора.
 # setA.update(setB)
 # print("Set update", setA)
 
@@ -256,3 +261,16 @@ setB = {1, 2, 3,                    10, 11, 12}
 # odds = frozenset({1, 3, 5, 7, 9})
 # changed_fz_set = list(odds)
 # print(changed_fz_set)
+
+
+
+
+
+
+
+
+# a = set(['a','b','c','c','c','c','c','b','b','b','b','a'])
+# print("set",a)
+# b = a
+# c = list(a)
+# print("sorted list set",sorted(c))
