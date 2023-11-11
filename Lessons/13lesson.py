@@ -261,13 +261,7 @@ my_set = {"apple", "banana", "cherry"}
 # odds = frozenset({1, 3, 5, 7, 9})
 # changed_fz_set = list(odds)
 # print(changed_fz_set)
-
-
-
-
-
-
-
+#_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 # a = set(['a','b','c','c','c','c','c','b','b','b','b','a'])
 # print("set",a)
