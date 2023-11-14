@@ -1,7 +1,6 @@
 #FIRST TEST /// https://proglib.io/tests/test-na-znanie-yazyka-python
 #SECOND TEST /// https://itproger.com/test/python
 
-
 # EXAM EXERCISES
 
 # 1. Create a function that finds n number of prime numbers.
