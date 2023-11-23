@@ -8,20 +8,37 @@
       _|_  __| |  |  | |  |  | 
                                                                                    
 
-                                                                  
+<h1>TABLE OF CONTENTS</h1>
 
-# 🎯 Here are some resources to help you get started with Python and exercise 💪👇️
+- [Exercises](#exercises)
+- [Semantic versioning:](#semantic-versioning)
+- [Install pipenv](#install-pipenv)
+- [To create requirements.txt file](#to-create-requirementstxt-file)
+- [Modules](#modules)
+  - [random](#random)
+  - [math](#math)
+  - [time / datetime / timedelta](#time--datetime--timedelta)
+  - [json](#json)
+  - [logging](#logging)
+  - [requests](#requests)
+  - [faker](#faker)
+  - [translators](#translators)
+  - [re](#re)
+  - [collections](#collections)
 
-### Practice Python (https://www.practicepython.org/)
-### HackerRank (https://www.hackerrank.com/domains/python)
-### Project Euler (https://projecteuler.net/archives)
-### Codewars (https://www.codewars.com/kata/search/python)
+
+# Exercises
+🎯 Here are some resources to help you get started with Python and exercise 💪👇️
+1. Practice Python (https://www.practicepython.org/)
+2. HackerRank (https://www.hackerrank.com/domains/python)
+3. Project Euler (https://projecteuler.net/archives)
+4. Codewars (https://www.codewars.com/kata/search/python)
 
 
-# Semantic versioning: https://semver.org/
+# Semantic versioning: 
+https://semver.org/
 
 > - ex: 3.11.0
-
 > - 1. "3"  => Patch version
 > -         (Bug fixes) (Big changes that affect everything inside our project)
 > - 2. "11" => Major version
@@ -31,60 +48,76 @@
 
 
 
-# 👇️ Install pipenv
+# Install pipenv
 1. python -m pip uninstall virtualenv pipenv -y
 2. py -m pip uninstall virtualenv pipenv -y
 3. python3 -m pip uninstall virtualenv pipenv -y
 4. python -m pip install --upgrade setuptools wheel
 5. python -m pip install --user pipenv
 
-## or 
-#### python -m pip install pipenv 
+- -- or -- 
+```bash
+python -m pip install pipenv
+``` 
 
-###### If you however get 
+- If you however get 
 ```
     'pipenv' is not recognized as an internal or external command, operable program or batch file 
 ```
-###### get the Python>- path to the base directory for the user site-packages by running:
-###### Mine is C:\Users\drgabrielharris\AppData\Roaming\Python\Python37\site-packages
-###### Replace site-packages in the path with Scripts then add to your system PATH 
-###### (on Windows: Edit environment variables for your account > in the User variables select 
-###### Path > Edit > New > C:\Users\drgabrielharris\AppData\Roaming\Python\Python37\Scripts )
+
+```md
+get the Python>- path to the base directory for the user site-packages by running:
+Mine is C:\Users\drgabrielharris\AppData\Roaming\Python\Python37\site-packages
+Replace site-packages in the path with Scripts then add to your system PATH 
+(on Windows: Edit environment variables for your account > in the User variables select 
+Path > Edit > New > C:\Users\drgabrielharris\AppData\Roaming\Python\Python37\Scripts )
+```
 
 
-# 🎯 To create requirements.txt file
+# To create requirements.txt file
 1. ```pipenv lock -r > requirements.txt```  - is outdated
-2. New version is: ```pipenv run pip freeze  > requirements.txt```
-
-
+2. 🎯 New version is: ```pipenv run pip freeze  > requirements.txt``` 
 ___
 
 # Modules
+<span>
+   <a  style="background:linear-gradient(to right, black, blue, black);  padding:10px;  border-radius:10px; color:snow;"
+      href="https://codete.com/blog/10-built-in-modules-in-python-you-should-know#overview">
+      **Codete**
+   </a>
+   - 10 Built-in Modules in Python You Should Know
+   <br>
+   <a  style="background:linear-gradient(to right, black, blue, black);  padding:10px;  border-radius:10px; margin-left:10px; color:snow;"
+      href="https://levelup.gitconnected.com/11-most-useful-built-in-python-modules-you-might-not-know-yet-eff3e0e6f586">
+      **Levelup**
+   </a>
+   - 11 Most Useful Built-in Python Modules You Might Not Know Yet
+   <br>
+   <br>
+</span>
 
-<!--* https://codete.com/blog/10-built-in-modules-in-python-you-should-know#overview -->
-<!--* https://levelup.gitconnected.com/11-most-useful-built-in-python-modules-you-might-not-know-yet-eff3e0e6f586 -->
-
-1. random      (https://docs.python.org/3/library/random.html)
-2. math 
-3. time        (https://docs.python.org/3/library/time.html)
+1. `random`      (https://docs.python.org/3/library/random.html)
+2. `math` 
+3. `time`        (https://docs.python.org/3/library/time.html)
    - datetime  (https://www.pythoncheatsheet.org/modules/datetime-module)
    - timedelta (https://www.pythoncheatsheet.org/modules/datetime-module)
-4. json        (https://medium.com/analytics-vidhya/json-in-python-163857b00415)
-5. logging     (https://majianglin2003.medium.com/python-logging-6a688fa63587)
-6. requests    (https://medium.com/@stayml/python-requests-a-simple-visual-introduction-1c57a60a7c46)
-7. faker       (https://andsilvadrcc.medium.com/how-to-generate-fake-data-using-the-faker-python-package-b6734b944cb2)
-8. translators (https://pypi.org/project/translators/)
-9. re          (https://docs.python.org/3/library/re.html)
-10. collections  (https://medium.com/this-code/python-collections-the-in-depth-guide-to-those-special-data-structures-8f03d537f9d4)
+4. `json`        (https://medium.com/analytics-vidhya/json-in-python-163857b00415)
+5. `logging`     (https://majianglin2003.medium.com/python-logging-6a688fa63587)
+6. `requests`    (https://medium.com/@stayml/python-requests-a-simple-visual-introduction-1c57a60a7c46)
+7. `faker`       (https://andsilvadrcc.medium.com/how-to-generate-fake-data-using-the-faker-python-package-b6734b944cb2)
+8. `translators` (https://pypi.org/project/translators/)
+9. `re`          (https://docs.python.org/3/library/re.html)
+10. `collections`  (https://medium.com/this-code/python-collections-the-in-depth-guide-to-those-special-data-structures-8f03d537f9d4)
 
-# 1. random
+
+## random
 -  RU: Модуль random предоставляет доступ к функциям, которые поддерживают множество операций.
    Возможно, самое важное - это то, что он позволяет генерировать случайные числа.
 
-#### random.random() : 
+1. `random.random()` : 
 - Return the next random floating point number in the range [0.0, 1.0).
 - RU: Возвращает следующее случайное число с плавающей запятой в диапазоне [0.0, 1.0).
-#### random.randint(a, b) : 
+2. `random.randint(a, b)` : 
 - Return a random integer N such that a <= N <= b.
 - RU: Возвращает случайное целое число N такое, что a <= N <= b.
 - ex:
@@ -92,7 +125,7 @@ ___
    import random
    print(random.randint(0, 10))
   ```
-#### random.choice(seq) : 
+3. `random.choice(seq)` : 
 - Return a random element from the non-empty sequence seq. If seq is empty, raises IndexError.
 - RU: Возвращает случайный элемент из непустой последовательности seq. Если seq пуст, возникает IndexError.
 - ex:
@@ -102,7 +135,7 @@ ___
    print(x)
    print(random.choice(x))
   ```
-#### random.shuffle(x[, random]) : 
+4. `random.shuffle(x[, random])` : 
 - Shuffle the sequence x in place.
 - RU: Перемешивает последовательность x на месте.
 - ex:
@@ -114,24 +147,24 @@ ___
    print(x)
   ```
 
-# 2. math
+## math
 - RU: Этот модуль предоставляет доступ к математическим функциям, определенным стандартом C.
 (Стандартная библиотека C - это набор заголовочных файлов, которые определяют различные библиотечные функции и макросы.
 Большинство функций стандартной библиотеки C также включены в стандартную библиотеку C ++, хотя и в разных заголовочных файлах.)
 
-#### math.ceil(x) : 
+1. `math.ceil(x)` : 
 - Return the ceiling of x as a float, the smallest integer value greater than or equal to x.
 - RU: Возвращает потолок x в виде плавающего числа, наименьшее целое значение, большее или равное x.
-#### math.floor(x) : 
+2. `math.floor(x)` : 
 - Return the floor of x as a float, the largest integer value less than or equal to x.
 - RU: Возвращает пол x в виде плавающего числа, наибольшее целое значение, меньшее или равное x.
-#### math.trunc(x) : 
+3. `math.trunc(x)` : 
 - Return the Real value x truncated to an Integral (usually an integer). 
 - RUL Возвращает действительное значение x, усеченное до целого (обычно целое число). 
-#### math.factorial(x) : 
+4. `math.factorial(x)` : 
 - Return x factorial as an integer. Raises ValueError if x is not integral or is negative.
 - RU: Возвращает факториал x в виде целого числа. Выдает ValueError, если x не является целым или отрицательным.  
-#### math.gcd(a, b) : 
+5. `math.gcd(a, b)` : 
 - Return the greatest common divisor of the specified integer arguments. If any argument is nonzero, 
    then the absolute value of the greatest common divisor is smaller than or equal to the smallest absolute value of the arguments.
 - RU: Возвращает наибольший общий делитель указанных целых аргументов. Если любой аргумент отличен от нуля, 
@@ -142,23 +175,23 @@ import math
 print(math.gcd(10, 20))
 ```
 
-#### math.pow(x, y) : 
+6. `math.pow(x, y)` : 
 - Return x raised to the power y. Exceptional cases follow Annex ‘F’ of the C99 standard as far as possible. 
    In particular, pow(1.0, x) and pow(x, 0.0) always return 1.0, even when x is a zero or a NaN. If both x and y are finite, 
    x is negative, and y is not an integer then pow(x, y) is undefined, and raises ValueError.
 - RU: Возвращает x, возведенный в степень y. Исключительные случаи следуют Приложению «F» стандарта C99 насколько это возможно. 
    В частности, pow(1.0, x) и pow(x, 0.0) всегда возвращают 1.0, даже когда x является нулем или NaN. Если x и y конечны, 
    x отрицателен, а y не является целым числом, то pow(x, y) не определен и вызывает ValueError.
-#### math.sqrt(x) : 
+7. `math.sqrt(x)` : 
 - Return the square root of x.
 - RU: Возвращает квадратный корень из x.
-#### math.pi : 
+8. `math.pi` : 
 - The mathematical constant π = 3.141592…, to available precision.
 - RU: Математическая константа π = 3.141592…, до доступной точности.
 
-# 3. time / datetime / timedelta
+## time / datetime / timedelta
 
-#### time.time() :
+1. `time.time()`:
 - Return the time in seconds since the epoch as a floating point number.
 - RU: Возвращает время в секундах с начала эпохи в виде числа с плавающей запятой.
 ```python
@@ -172,7 +205,7 @@ print("tm_mday  =>", time_z.tm_mday)
 print("tm_year  =>", time_z.tm_year)
 print("tm_zone  =>", time_z.tm_zone)
 ```
-#### time.sleep(secs) :
+2. `time.sleep(secs)`:
 - Suspend execution of the calling thread for the given number of seconds. 
    The argument may be a floating point number to indicate a more precise sleep time. 
    The actual suspension time may be less than that requested because any caught signal will terminate the sleep() following execution of that signal’s catching routine. 
@@ -185,7 +218,7 @@ print("tm_zone  =>", time_z.tm_zone)
 time.sleep(1) # sleep for 1 second
 ```
 
-#### time.localtime([secs]) :
+3. `time.localtime([secs])`:
 - Convert a time expressed in seconds since the epoch to a struct_time in time. 
    If secs is not provided or None, the current time as returned by time() is used. 
    Fractions of a second are ignored. 
@@ -199,7 +232,7 @@ time.sleep(1) # sleep for 1 second
 print(time.localtime(UNIX-time))
 ```
 
-#### time.strftime(format[, t]) :
+4. `time.strftime(format[, t])`:
 - Convert a tuple or struct_time representing a time as returned by gmtime() or localtime() to a string as specified by the format argument. 
    If t is not provided, the current time as returned by localtime() is used. 
    format must be a string. 
@@ -223,7 +256,7 @@ print(time.strftime("%y-%m-%d %H:%M:%S", time.localtime()))
 
 
 
-#### datetime.datetime.now() :
+5. `datetime.datetime.now()`:
 - Return the current local date and time.
 - RU: Возвращает текущую локальную дату и время.
 ```python
@@ -231,7 +264,7 @@ import datetime
 print(datetime.datetime.now())
 ```
 
-#### datetime.datetime(year, month, day[, hour[, minute[, second[, microsecond[, tzinfo]]]]]) :
+6. `datetime.datetime(year, month, day ...)`:
 - The year, month and day arguments are required. tzinfo may be None, or an instance of a tzinfo subclass. 
    The remaining arguments may be ints, longs, or floats, and may be positive or negative.
 - RU: Требуются аргументы год, месяц и день. tzinfo может быть None или экземпляром подкласса tzinfo.
@@ -240,7 +273,7 @@ print(datetime.datetime.now())
 print(datetime.datetime(2020, 5, 17, 12, 30, 0, 0))
 ```
 
-### Timedelta
+7. `timedelta`
 - EN: The timedelta class is used to represent the `difference` between two dates or times.
 - RU: Класс timedelta используется для представления `разницы` между двумя датами или временем.
 ```python
@@ -260,13 +293,13 @@ print(now + datetime.timedelta(days=365))
 >>> datetime.datetime(*2024*, 7, 30, 12, 30, 10, 999999)
 ```
 
-# 4. json
+## json
 ```python
 print(json.dumps({}))   # => "{}"  =>  JSON.stringify()
 print(json.loads("{}"))  # =>  {}  =>  JSON.parse()
 ```
 
-# 5. logging
+## logging
 > - Logging is a means of tracking events that happen when some software runs.
 > ex: errors that occur, warnings about resource utilization, or even just informational messages that are generated by an application.
 > - RU: Журналирование - это способ отслеживания событий, которые происходят при запуске какого-либо программного обеспечения. 
@@ -285,7 +318,7 @@ print(json.loads("{}"))  # =>  {}  =>  JSON.parse()
 > - By default, the logging module logs the messages with a severity level of WARNING or above.
 > - RU: По умолчанию модуль регистрации регистрирует сообщения с уровнем серьезности WARNING или выше.
 
-#### CONFIGURATION
+`CONFIGURATION`
 - To configure the logging module, you must use the basicConfig() function.
 ex: 
 ```python
@@ -316,20 +349,50 @@ logging.debug(f'This is warning message')
   
 > - datefmt: Specifies the format of the date/time portion of a log message.
 > -  RU: datefmt: указывает формат даты / времени части сообщения журнала.
-  
-#### ROOT
-- The root logger is the parent of all the other loggers in the logging module.
-  RU: Корневой регистратор является родительским для всех остальных регистраторов в модуле регистрации.
 
-# 6. requests
-# 7. faker
-# 8. translators
+## requests
+This library is like axios in JS
+```python
+# In js we would do:
+# axios.get('https://...')
+
+# In python we do:
+import requests
+response = requests.get('https://...')
+
+# To get the status code:
+print(response.status_code)
+
+# To get the content:
+print(response.content)
+
+# To get the json:
+print(response.json())
+```
+## faker
+
+This is a library that generates fake data
+```python
+from faker import Faker
+fake = Faker()
+print(fake.name())
+print(fake.address())
+print(fake.text())
+print(fake.email())
+print(fake.phone_number())
+print(fake.country())
+print(fake.url())
+...
+```
+## translators
+
 ```python
 import translators as ts
 q_text = 'Какая погода сегодня?'
 print(ts.translate_text(q_text))
 ```
-# 9. re
+## re
+
 ```python
 # Source: https://regexr.com/
 
@@ -375,8 +438,7 @@ string = "Hello World!"
 x = re.findall("H.ll.", string)
 print(x)
 ```
-
-# 10. collections
+## collections
 ```python 
 # collections
 # 1. collections.deque
@@ -410,4 +472,5 @@ d = collections.defaultdict(int)  =>  gives default value of 0 if the key is not
 d['a'] = 1
 d['b'] = 2
 >>> print(d['c'])  =>  is 0
-```
+```                                                                  
+
