@@ -1,13 +1,30 @@
 #Istam Company
 
-# _________  _______  _________  ________
-#     |      |            |      |      |    |\          /|         
-#     |      |            |      |      |    | \        / |           
-#     |      |_____       |      |______|    |  \      /  |     _____        
-#     |            |      |      |      |    |   |    |   |     __\\_  COMPANY     
-#     |            |      |      |      |    |    \  /    |       
-# ____|____   _____|      |     /        \  /      \/      \     
-                                                            
+#    ___ ___ ___  __   _   _  
+#     |  \__  |  |__| | \ / |  
+#    _|_  __| |  |  | |  |  | 
+
+
+# ------------------------------------------------------
+# NOTE: IMPORTANT
+# 1. Understand the task (50% solution)
+# RU: Понять задачу (50% решения)
+# 2. Identify the type of the last result
+# RU: Определить тип конечного результата
+# 3. Identify methods of current result type
+# RU: Определить методы типа конечного результата
+#   - it will help us to gether information
+#     RU: это поможет нам собрать информацию
+# 4. Think about the login (depends on the issue)
+#    RU: Подумать о логике (зависит от задачи)
+#    - would you need a loop        (RU: нужен ли цикл ?)
+#    - would you need a condition   (RU: нужно ли условие ?)
+#    - would you need a variable    (RU: нужна ли переменная ?)
+# 5. Name it correctly!!!
+# RU: Назовите это правильно !!!
+# ------------------------------------------------------
+
+
 
 lesson = 'Introduction'
 """
@@ -860,23 +877,136 @@ s = [f"Even {num}" if num%2==0 else f"Odd {num}" for num in list(arr) if num<50]
 """
 
 
+
+lesson = "LOOPS"
+"""
+# ----------WHILE LOOP
+# SYNTAXIS
+# while condition == True:
+#   do something
+# ----------FOR LOOP
+# SYNTAXIS
+# for x in []:
+#   print(x)
+# ----------ENUMERATE
+# enumerate is used to get an index for the item that we are taking from list
+# ex:
+#   for index, item in enumerate(list):
+#       print(index, item)
+
+# ==============================================================================
+# break     => breaks up the current loop
+# RU: прерывает текущий цикл
+# continue  => skips the current iteration of the loop
+# RU: пропускает текущую итерацию цикла
+# ---------
+# fruits = ["apple", "banana", "kiwi", "disgusting cherry", "mango"]
+# for fruit in fruits:
+#     if 'disgusting' in fruit:
+#         break
+#     elif 'kiwi' == fruit:
+#         continue
+#     else:
+#         print(fruit)
+# ==================================================================
+# round((time.time() - start_time), 2)
+# ------------
+# round   => rounds the number to the specified number of digits
+# RU: округляет число до указанного количества цифр
+# EX: print(round(3.454, 2)) => 3.45
+# ------------
+# import time
+# time.time() => returns the number of seconds passed since epoch
+# EX: start_time = time.time()
+#     end_time = time.time()
+#     difference = end_time - start_time
+# 
+# from datetime import datetime as dt
+# start_time = dt.now()
+# for n in range(100):
+#     print(n)
+#     for n2 in range(100):
+#         print(n2)
+
+# end_time = dt.now()
+# print("Execution time: ", end_time - start_time)
+# ==================================================================
+# for i in range(10):
+    # pass
+# for i in "Some text":
+    # pass
+# ==================================================================
+# itr1 = list('abcdefghijklmnopqrstuvwxyz')
+# itr2 = range(len(itr1))
+# zipped = zip(itr1, itr2)
+
+# for (item, item2) in zipped:
+#     print(item, item2)
+# ==================================================================
+# loop with dictionaries
+# for key, value in dict.items():
+#     print(key, value)
+# ==================================================================
+# import random
+# letters = "abcdefghijklmnopqrstuvwxyz"
+# letters_ru = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+# numbers = "1234567890"
+# symbols = "@#$%^&*"
+
+# total_symbols_for_password = 20
+# everything_included = letters + numbers + symbols
+
+# created_password = ""
+# for i in range(total_symbols_for_password):
+#     random_int = random.randint(0, len(everything_included)-1)
+#     created_password += everything_included[random_int]
+
+# print(created_password)
+# ==================================================================
+"""
+
+
+
 lesson = "Dictionaries  =>  словарь"
 """
-# x = {"first": "Один", "second": "Два",
-#     "third": "Три", "fourth": "Четыре",
-#     "fifth": "Пять", "sixth": "Шесть",
-#     "seventh": "Семь", "eighth": "Восемь",
-# }
+# DICTIONARIES 
+# Словари - это структуры данных, которые хранят данные в виде пар ключ-значение.
+x = {
+    "first": "Один",    "second": "Два",
+    "third": "Три",     "fourth": "Четыре",
+    "fifth": "Пять",    "sixth": "Шесть",
+    "seventh": "Семь",  "eighth": "Восемь",
+}
 # print(x.get("fourth", "Не нашлось"))
+# print(x["fourth"]) # => Четыре 
+# print(x["www"]) # => # Error if not found
 # ------------------------------------------------
 # z = [ "Один", "Два", "Три", "Четыре", "Пять", "Шесть", "Семь" ]
 # for i in z:
 #     if i == "Четыре":
 #         print(i)
+# NOTE:
+# If there are 1000 doors, when using list and seeking some of them,
+# the loop we are using, opens every door one by one to check them
+# But, if we use dictionary here, it directly opens the needed one.
+# RU: Если есть 1000 дверей, когда мы используем <list> и ищем 
+# некоторые из них, цикл, который мы используем, открывает каждую дверь
+# по одной, чтобы проверить их. Но, если мы используем здесь <dict>,
+# он сразу же открывает нужную.
 # ------------------------------------------------
-
+# IN JAVA-SCRIPT
+# function Person(name, ..., ...) {
+#     this.name = name
+#     this.name = name
+#     this.name = name
+#     ...
+# }
+# let person1 = new Person(..., ..., ...)
+# ------------------------------------------------
+# IN PYTHON
 # dict()  =>  dict(key=value, key=value, key=value)
-
+# person = dict(name='Kamron', bemiyya=True)
+# print(person)
 # list()  => []
 # str()   => ''
 # int()   => 0
@@ -886,39 +1016,92 @@ lesson = "Dictionaries  =>  словарь"
 # dict()  => {}
 
 
-
 # # ACCESSING ITEMS ---------------------------------------------------------------------------
-
 # dict[key]         => берёт значение по ключу
 # dict.get(key)     => берёт значение по ключу
 # dict.get(key, default)  => берёт значение по ключу, если его нет, то возвращает default
+
+# Object.keys(dict) => возвращает список ключей (JS)
 # dict.keys()       => возвращает список ключей
+
+# Object.values(dict) => возвращает список ключей (JS)
 # dict.values()     => возвращает список значений
+
+# Object.entries(dict) => возвращает список ключей (JS)
 # dict.items()      => возвращает список кортежей (ключ, значение)
 
+# person1 = dict(name='Javox', bemiyya='True')
+# print(person1.items())
+
+
 # # ADDING ITEMS -----------------------------------------------------------------------------
-# dict[key] = value
+# person1 = dict(name='Mirsaid', bemiyya=False)
+# print(person1.items())
+# person1['bemiyya'] = True
+# person1['...'] = "..."
+# person1[1] = 1
+# print(person1.items())
 # -----------------
+# Update => updates the dict (changes the original)
 # dict.update({key:value, key:value, key:value})
-# person.update({"name": "Alex", "address": "Samarkand"})
+# person1.update({
+#     "name": "Alex", 
+#     "address": "Samarkand", 
+#     "bemiyya":True
+# })
+# print(person1)
 # -----------------
+# If the key is not found, a new key:value pair is added to the dictionary.
+# RU: Если ключ не найден, в словарь добавляется новая пара ключ: значение.
+
+# But if it exists, then the value of the key is NOT updated.
+# RU: Но если он существует, то значение ключа НЕ обновляется.
 # dict.setdefault(key, value)
-# person.setdefault("address", "Tashkent")
+# person1 = dict(name='Mirsaid', bemiyya=False)
+# person1.setdefault("address", "Tashkent")
+# print(person1)
 
 
 # # REMOVING ITEMS ---------------------------------------------------------------------------
+# person1 = dict(name='Mirsaid', bemiyya=False)
 
 # dict.pop(key)
+# del_val = person1.pop('name')
+# print("del_val: ", del_val)
+# print("person1: ", person1)
+
+# res = person1.pop('www', None)
+# print("Result: ", res)
+# print(person1)
 # dict.pop(key, default)
+
 # dict.popitem() => removes the last inserted item
+# res = person1.popitem()
+# print("Result: ", res)
+# print("Remaining: ", person1)
+
 # del dict[key]
-# del dict
+# del person1['bemiyya']
+# del person1 # deletes the whole dict
+# print("Remaining: ", person1)
 
 # # MERGE ------------------------------------------------------------------------------------
+# person1 = dict(name='Mirsaid', bemiyya=False)
+# person2 = dict(name="Covid", contageous=True)
+# person3 = dict(name="Bemiyya", widespread=True)
+# print("Before: ", person1)
+# person1 |= person2
+# print("After: ", person1)
+# person1 |= person2 | person3
+# print("After: ", person1)
 # dict1.update(dict2)
 # dict1 |= dict2
 # dict1 |= dict2 | dict3 | dict4
 # {**dict1, **dict2, **dict3, **dict4}
+# print("Original: ", person1)
+# result = {**person1, **person2, **person3}
+# print("New: ", result)
+
 
 # person2 = { "name2":"John",  "age2":20,  "surname2":"Khan",  "address2":"Samarkand" }
 # person3 = {1:'a', 2:'b'}
@@ -934,7 +1117,7 @@ lesson = "Dictionaries  =>  словарь"
 # dict.clear()
 # dict.copy()
 
-# for key in person.keys():
+# for key, val in person.items():
 #     person[key] = ""
 
 # p2 = person.copy()
@@ -952,6 +1135,9 @@ lesson = "Dictionaries  =>  словарь"
 # dict.fromkeys(iterable, value)  -> is used to create a new dictionary from the given 
 #                                    sequence of elements with a value provided by the user.
 # EX: 
+# fruits = ['apple', 'mango', 'banana']
+# result = dict.fromkeys(fruits, 0)
+# print(result)
 # x = dict.fromkeys(['name', 'age'], 'unknown')
 # print(x)
 
@@ -1236,89 +1422,39 @@ lesson = "Sets"
 """
 
 
-lesson = "LOOPS"
-"""
-# ----------WHILE LOOP
-# SYNTAXIS
-# while condition == True:
-#   do something
-# ----------FOR LOOP
-# SYNTAXIS
-# for x in []:
-#   print(x)
-# ----------ENUMERATE
-# enumerate is used to get an index for the item that we are taking from list
-# ex:
-#   for index, item in enumerate(list):
-#       print(index, item)
-
-# ==============================================================================
-# break     => breaks up the current loop
-# RU: прерывает текущий цикл
-# continue  => skips the current iteration of the loop
-# RU: пропускает текущую итерацию цикла
-# ---------
-# fruits = ["apple", "banana", "kiwi", "disgusting cherry", "mango"]
-# for fruit in fruits:
-#     if 'disgusting' in fruit:
-#         break
-#     elif 'kiwi' == fruit:
-#         continue
-#     else:
-#         print(fruit)
-# ==================================================================
-# round((time.time() - start_time), 2)
-# ------------
-# round   => rounds the number to the specified number of digits
-# RU: округляет число до указанного количества цифр
-# EX: print(round(3.454, 2)) => 3.45
-# ------------
-# import time
-# time.time() => returns the number of seconds passed since epoch
-# EX: start_time = time.time()
-#     end_time = time.time()
-#     difference = end_time - start_time
-# 
-# from datetime import datetime as dt
-# start_time = dt.now()
-# for n in range(100):
-#     print(n)
-#     for n2 in range(100):
-#         print(n2)
-
-# end_time = dt.now()
-# print("Execution time: ", end_time - start_time)
-# ==================================================================
-# import random
-# letters = "abcdefghijklmnopqrstuvwxyz"
-# letters_ru = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
-# numbers = "1234567890"
-# symbols = "@#$%^&*"
-
-# total_symbols_for_password = 20
-# everything_included = letters + numbers + symbols
-
-# created_password = ""
-# for i in range(total_symbols_for_password):
-#     random_int = random.randint(0, len(everything_included)-1)
-#     created_password += everything_included[random_int]
-
-# print(created_password)
-# ==================================================================
-"""
-
-
 lesson = "File handling"
 """
+# import sys
+# import os
+
+# FILENAME = sys.argv[1]
+# text = sys.argv[2:]
+
+# if os.path.exists(FILENAME):
+#     with open(FILENAME, "w") as file:
+#         file.write(" ".join(text))
+#         print("If block")
+#         print("The file exists")
+#         file.close()
+# else:
+#     with open(FILENAME, "x") as file:
+#         file.write(" ".join(text))
+#         print("Else block")
+#         print("The file exists")
+#         file.close()
+
+# with open(FILENAME, "r") as file:
+#     print(file.read())
+#     file.close()
+
 # CREATE A FILE
 # To create non-existing file we use "x" mode
 # Also, if the file IS FOUND then it returns an error
 # ex: 
-# f = open("myfile.txt", "x") # =>  x mode allows to create a 
-                                # file if it does not exist, 
-                                # otherwise it raises an error.
+# open("myfile.txt", "x") # =>  x mode allows to create a 
+                               #file if it does not exist, 
+                               #otherwise it raises an error.
 # if we don't want to get an error then we have to use os
-# import os
 # if os.path.exists("myfile.txt"):
 #   print("The file exists")
 # ===========================================================
@@ -1332,6 +1468,12 @@ lesson = "File handling"
 # 2. readline    => reads only one line
 # 3. readlines() => reads the file line by line (all lines)
 # 4. loop through the file line by line
+
+# FILENAME = "test.txt"
+# with open(FILENAME, 'r+') as f:
+#     f.write("\nThis is new line")
+#     for line in f.readlines():
+#         print(line)
 
 # ex:
 #   f = open("myfile.txt", "r")
@@ -1365,9 +1507,9 @@ lesson = "File handling"
 # "b" - Binary - Binary mode (e.g. images)
 
 # Combinations of modes:
-"a+" - Read and Append - Opens a file for reading and appending, creates the file if it does not exist
-"w+" - Write and Read - Opens a file for writing and reading, creates the file if it does not exist
-"r+" - Read and Write - Opens a file for reading and writing, error if the file does not exist
+# "a+" - Read and Append - Opens a file for reading and appending, creates the file if it does not exist
+# "w+" - Write and Read - Opens a file for writing and reading, creates the file if it does not exist
+# "r+" - Read and Write - Opens a file for reading and writing, error if the file does not exist
 
 # ===========================================================
 # WORKING WITH DIRECTORIES and os
