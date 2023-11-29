@@ -70,12 +70,12 @@ def run_code(questions):                                            # First leve
     for question in questions:
         answer = input(question.prompt + 'Answer: ').lower()
         if answer == question.answer:
-            playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/right.mp3')
+            playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\right.mp3')
             score += 1          #you must specify the path to the folder on your computer
         else:
             print("Oh no, Wrong...")
             print(f"The answer is (({question.answer}))")
-            playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/wrong.mp3')
+            playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\wrong.mp3')
                                 #you must specify the path to the folder on your computer
     print(f"\n\n\n\n                You got {score} / {len(questions)} correnct!")
 
@@ -85,25 +85,25 @@ def run_code(questions):                                            # First leve
         random.shuffle(questions_lv_two)                             # And get to the 2nd level-code
         lev_two_score = 0
         print("             You got right more than half of questions and can get on to next level...")
-        playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/lv_up.mp3')
+        playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\lv_up.mp3')
                             #you must specify the path to the folder on your computer
 
         for quiz_two in questions_lv_two:                             # Loop through second ques.-list
             answer = input(quiz_two.prompt + 'Answer: ').lower()
             if answer == quiz_two.answer:
-                playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/right.mp3')
+                playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\right.mp3')
                 score += 1          #you must specify the path to the folder on your computer
                 lev_two_score += 1
             else:
                 print("Bad luck...try next>>>")
                 print(f"The answer is (({quiz_two.answer}))")
-                playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/wrong.mp3')
+                playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\wrong.mp3')
                                     #you must specify the path to the folder on your computer
 
 
 
         if score > 12:                                                 # Demonstration of the result
-            playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/triumph.mp3')
+            playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\triumph.mp3')
                                 #you must specify the path to the folder on your computer
             print(f'You got {lev_two_score} / {len(questions_lv_two)}, ---WELL DONE---, You are very smart person...')
         elif score <= 10:
@@ -116,12 +116,12 @@ def run_code(questions):                                            # First leve
             print("\n       If you would like to try again press --ENTER--\n")          # Ask for one more time
             key = ord(msvcrt.getch())
             if key == 13:
-                playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/sweet.mp3')
+                playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\sweet.mp3')
                 random.shuffle(questions)
                 run_code(questions)
             else:
                 print("Thank you for playing ... Hope to see you again...")
-                playsound.playsound('D:/Pythonres/Mini_Games_And_Projects/Quiz-Game-main/sweet.mp3')
+                playsound.playsound('D:\\Pythonres\\Mini_Games_And_Projects\\Quiz-Game-main\\sweet.mp3')
                 break
 
 if __name__ == '__main__':
