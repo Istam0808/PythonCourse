@@ -1,7 +1,7 @@
 import time
 
 def printCharacter(text = "Hello World", interval = 100):
-    alp = "1234567890!@#$%^&*()_+-=QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm "
+    alp = "1234567890!@#$%^&*()_+-=QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnmАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя "
     i = 0
     result = ""
     while True:
@@ -15,4 +15,4 @@ def printCharacter(text = "Hello World", interval = 100):
             break
         time.sleep(interval / 500)
 
-printCharacter("Hello World", 10)
+printCharacter("Istam", 10)
