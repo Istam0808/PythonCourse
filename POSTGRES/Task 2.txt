@@ -1,0 +1,29 @@
+SECOND EXERCISE.
+
+
+---------------------------------------------------------------------------
+CREATE A TABLE called orders with the following columns:
+
+order_id, 
+order_date, 
+order_cost, 
+order_status,
+shipping_address  =>  CREATE ADDRESS TYPE  => (RU: создаем тип адреса)
+
+====---->  CREATE TYPE address AS (street TEXT, city TEXT, zip INTEGER)  <----=====   
+---------------------------------------------------------------------------
+INSERT INTO orders 5 elements
+RU: добавляем 5 элементов
+---------------------------------------------------------------------------
+ADD a new column called customer_id
+RU: добавляем новую колонку customer_id
+---------------------------------------------------------------------------
+CREATE CUSTOMERS TABLE with the following columns:
+RU: создаем таблицу customers с колонками:
+id
+name
+email
+---------------------------------------------------------------------------
+UPDATE two of the orders' ids with random customer ids that you have created
+RU: обновляем два id заказов с рандомными id клиентов, которые вы создали
+---------------------------------------------------------------------------

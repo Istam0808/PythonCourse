@@ -1,0 +1,48 @@
+# 1st exercise of 'postgresql'
+
+# - Create a table called 'cars' with the following columns:
+# it should have unique id always
+# RU: уникальный идентификатор
+# it should have a Model of the car (as text no more than 20 characters)
+# RU: модель автомобиля
+# it should have a Year of the car (as integer)
+# RU: год выпуска автомобиля
+# it should have a Price of the car (as integer)
+# RU: цена автомобиля
+# it should have color of the car (as text no more than 20 characters)
+# RU: цвет автомобиля
+# it should have an origin of the car (where it is from ... etc...)
+# RU: страна производитель автомобиля
+=================================================================================
+# ADD - Добавить в таблицу новую запись
+# add at least 5 cars to the table
+# each should be unique
+=================================================================================
+# UPDATE - Обновить запись в таблице
+# update the price of the car with id 3 to 12345
+# RU: обновить цену автомобиля с id 3 на 12345
+=================================================================================
+# ALTER - Изменить структуру таблицы
+# add a column to the table called 'sold'
+# RU: добавить в таблицу колонку 'sold' (продано) *BOOLEAN*
+#     тип данных - boolean (логический тип данных)
+=================================================================================
+# UPDATE again  - Обновить запись в таблице
+# update the sold status of the car with id 4 to True
+# RU: обновить статус продажи автомобиля с id 4 на True
+=================================================================================
+# DELETE - Удалить запись из таблицы
+# delete the car with id 5 from the table
+# RU: удалить автомобиль с id 5 из таблицы
+
+
+
+# To change the column data type we use ALTER COLUMN
+# ALTER COLUMN cars TYPE boolean USING sold::boolean;
+
+# ALTER TABLE table_name
+# ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
+
+==================================================================================
+==================================================================================
+==================================================================================

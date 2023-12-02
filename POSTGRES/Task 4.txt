@@ -1,0 +1,14 @@
+# Create 2 users and save them into db
+
+# Ask 3rd time through input to login
+# If the email of the user and password the user
+# math with the db info, the print "You are logged in"
+# Otherwise, print "You entered wrong email or password"
+# ======================================================
+# RU: Запросите у пользователя почту и пароль.
+# Создайте 2 пользователя и сохраните их в БД
+
+# Спросите 3-ий раз через input логин
+# Если почта пользователя и пароль пользователя
+# совпадают с информацией из БД, то напечатать "You are logged in"
+# В противном случае, напечатать "You entered wrong email or password"
